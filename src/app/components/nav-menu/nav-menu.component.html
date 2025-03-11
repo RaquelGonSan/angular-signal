@@ -1,0 +1,13 @@
+<div class="d-flex flex-column">
+    @for (item of menuItems; track $index) {
+        <a class="btn btn-primary mb-2"
+            [routerLink]="item.path"
+            routerLinkActive="active bg-dark text-white"
+            >
+            <span>{{item.title}}</span>
+        </a>
+    }
+</div>
+
+
+

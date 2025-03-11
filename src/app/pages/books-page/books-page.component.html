@@ -1,0 +1,16 @@
+
+        <div class="col-9 p-4">
+           <h1>Lista de Libros</h1>
+           <p>Todos: </p>
+           @for (book of currentBooks(); track book.id) {
+            <li>{{book.title}} - {{book.autor}}</li>
+        }
+
+        <div role=" group">
+            <button class="btn btn-success m-2" (click)="changeFilter('pending')">Pendientes</button>
+            <button class="btn btn-success m-2-2" (click)="changeFilter('all')">Todos</button>
+            <button class="btn btn-success m-2" (click)="changeFilter('completed')">Leidos</button>
+        </div>
+        </div>
+
+

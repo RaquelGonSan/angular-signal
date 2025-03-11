@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="grid">
+        <article>
+            @let data = locations();
+            <h2>Locations: {{data.length}}</h2>
+            <ul class="list-group">
+                @for (location of data; track location.id) {
+                 
+                        <li class="list-group-item">
+                         <span>  
+                             {{location.name}} - Lat: {{location.latitude}}- Long: {{location.longitude}}
+                        </span>
+                        </li>
+                }
+
+        
+            </ul>
+        </article>
+    </div>
+</div>

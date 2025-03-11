@@ -1,0 +1,42 @@
+<div class="container">
+  <article>
+    <h2>Inputs Signal Parent Component</h2>
+
+    <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Name</button>
+        <input type="text" class="form-control"  [(ngModel)]="firstName">
+      </div>
+
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">LastName</button>
+        <input type="text" class="form-control"  [(ngModel)]="lastName">
+      </div>
+
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Age</button>
+        <input type="number" class="form-control"  [(ngModel)]="age">
+      </div>
+
+</article>
+
+<app-child 
+    [firstname]="firstName()" 
+    [lastname]="lastName()" 
+    [age]="age()" 
+    [products]="products()"
+
+ >
+</app-child>
+<h1>Products</h1>
+<div class="grid">
+    @for (product of products(); track product.id) {
+        <app-product [product]="product" />   
+    }
+</div>
+
+<button class="btn btn-primary" (click)="addProduct()">Add Product</button>
+
+
+</div>
+
+
